@@ -1,0 +1,53 @@
+:css
+  .wrapper{
+    width: 950px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid;
+  }
+  .wrapper .video{
+
+    float: left;
+    margin-right: 20px;
+
+  }
+
+  .wrapper .description{
+    margin-top: 30px;
+  }
+
+  .wrapper .actions{
+
+    overflow: hidden;
+
+  }
+
+  .wrapper .actions li{
+
+    float: left;
+    margin-top: 20px;
+
+  }
+
+  .wrapper .actions li:first-child{
+
+
+    margin-right: 10px;
+
+
+  }
+
+
+.wrapper
+  .video-container
+    .video
+      %img(src="#{@video.large_cover}")
+
+    .description
+      %h3.lead= @video.title
+      %span Rating:
+      -#= @video.rating
+      %p= @video.description
+    .actions
+      %a.btn.btn-primary(href="#{@video.video_url}") Watch Now
+      - #obj_path(another_path, more information). It's a way to pass information to the server side
