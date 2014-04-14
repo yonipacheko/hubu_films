@@ -1,4 +1,4 @@
-class CatergoriesController < ApplicationController
+class CategoriesController < ApplicationController
 
   def new
 

@@ -7,6 +7,7 @@ class Video < ActiveRecord::Base
   validates :description, presence: true
 
   def self.search_by_title(arguments)
+    return [] if arguments.blank?
     Video.where('title LIKE ?', "%#{arguments}%")
   end
 end
